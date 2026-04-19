@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Basement Remodel — 806 Burr Oak Ct</title>
+<style>
+  :root {
+    --bg: #0f172a;
+    --card: #1e293b;
+    --card-2: #293548;
+    --border: #334155;
+    --text: #f1f5f9;
+    --muted: #94a3b8;
+    --accent: #60a5fa;
+    --green: #34d399;
+    --yellow: #fbbf24;
+    --red: #f87171;
+    --purple: #c084fc;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+    padding: 24px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  h1 { font-size: 28px; margin-bottom: 4px; }
+  h2 { font-size: 20px; margin: 32px 0 12px; color: var(--accent); border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  h3 { font-size: 16px; margin-bottom: 8px; }
+  .subtitle { color: var(--muted); font-size: 14px; margin-bottom: 24px; }
+  .grid { display: grid; gap: 16px; }
+  .overview { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+  .stat {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 16px;
+    border-radius: 8px;
+  }
+  .stat .label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px; }
+  .stat .value { font-size: 18px; font-weight: 600; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 16px;
+  }
+  .quote-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .quote-name { font-size: 18px; font-weight: 600; }
+  .quote-company { color: var(--muted); font-size: 13px; margin-top: 2px; }
+  .badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .badge-green { background: rgba(52,211,153,0.15); color: var(--green); border: 1px solid rgba(52,211,153,0.3); }
+  .badge-yellow { background: rgba(251,191,36,0.15); color: var(--yellow); border: 1px solid rgba(251,191,36,0.3); }
+  .badge-red { background: rgba(248,113,113,0.15); color: var(--red); border: 1px solid rgba(248,113,113,0.3); }
+  .badge-purple { background: rgba(192,132,252,0.15); color: var(--purple); border: 1px solid rgba(192,132,252,0.3); }
+  .badge-gc { background: rgba(96,165,250,0.15); color: var(--accent); border: 1px solid rgba(96,165,250,0.3); }
+  .quote-meta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+    padding: 12px;
+    background: var(--card-2);
+    border-radius: 6px;
+    margin-bottom: 12px;
+  }
+  .meta-label { font-size: 10px; color: var(--muted); text-transform: uppercase; margin-bottom: 2px; }
+  .meta-value { font-size: 14px; font-weight: 500; }
+  .price { font-size: 20px; font-weight: 700; color: var(--green); }
+  .quote-section { margin-top: 12px; }
+  .quote-section-label { font-size: 11px; color: var(--muted); text-transform: uppercase; margin-bottom: 4px; }
+  .quote-contact a { color: var(--accent); text-decoration: none; }
+  .quote-contact a:hover { text-decoration: underline; }
+  ul.clean { list-style: none; padding: 0; }
+  ul.clean li { padding: 4px 0; font-size: 14px; }
+  ul.clean li::before { content: "→ "; color: var(--muted); }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--border); }
+  th { background: var(--card-2); color: var(--muted); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; }
+  td.center { text-align: center; }
+  .covered { color: var(--green); font-weight: 600; }
+  .pending { color: var(--muted); font-style: italic; }
+  .dash { color: var(--border); }
+  .links { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+  .link-btn {
+    display: inline-block;
+    padding: 8px 14px;
+    background: var(--card-2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .link-btn:hover { background: var(--border); }
+  .exclusions { font-size: 13px; color: var(--muted); font-style: italic; }
+  footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--border); color: var(--muted); font-size: 12px; text-align: center; }
+  @media (max-width: 640px) {
+    body { padding: 16px; }
+    h1 { font-size: 22px; }
+    table { font-size: 12px; }
+    th, td { padding: 8px; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Basement Remodel</h1>
+<p class="subtitle">806 Burr Oak Ct, Oconomowoc WI 53066 · Rev 4 (Harlequin Modern) · ~625 SF finished</p>
+
+<div class="links">
+  <a class="link-btn" href="https://docs.google.com/spreadsheets/d/10yE3Aqdu0S5YPDT1YOj0e847rfZFuCeayyJ2UPYxYPc/edit" target="_blank">📊 Live Google Sheet</a>
+  <a class="link-btn" href="https://calendar.google.com/" target="_blank">📅 Family Calendar</a>
+</div>
+
+<h2>Project Overview</h2>
+<div class="grid overview">
+  <div class="stat"><div class="label">Total Finished</div><div class="value">~625 SF</div></div>
+  <div class="stat"><div class="label">Bedroom 4</div><div class="value">~84 SF</div></div>
+  <div class="stat"><div class="label">3/4 Bath</div><div class="value">~56 SF</div></div>
+  <div class="stat"><div class="label">Open Play Room</div><div class="value">~395 SF</div></div>
+  <div class="stat"><div class="label">Storage</div><div class="value">~50 SF</div></div>
+  <div class="stat"><div class="label">Kid Fort</div><div class="value">~24 SF</div></div>
+</div>
+
+<h2>Scope Coverage Matrix</h2>
+<div class="card">
+  <table>
+    <thead>
+      <tr>
+        <th>Trade / Scope</th>
+        <th>Dave Jones LLC</th>
+        <th>Home MD Exteriors</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Framing</td><td class="center dash">—</td><td class="center pending">Pending GC quote</td><td>Walls around bedroom, bath, mech nook, storage, kid fort</td></tr>
+      <tr><td><strong>HVAC</strong></td><td class="center covered">✓ $2,390</td><td class="center pending">Pending</td><td>5 supply takeoffs, 2 returns, 2 bath fan vents, registers</td></tr>
+      <tr><td>Plumbing (bath)</td><td class="center dash">—</td><td class="center pending">Pending</td><td>Shower, toilet, sink — rough-in exists</td></tr>
+      <tr><td>Electrical</td><td class="center dash">—</td><td class="center pending">Pending</td><td>Recessed LEDs, bedroom fan, bath light/fan, smoke/CO</td></tr>
+      <tr><td>Drywall</td><td class="center dash">—</td><td class="center pending">Pending</td><td>All walled areas</td></tr>
+      <tr><td>Flooring — LVP (bedroom)</td><td class="center dash">—</td><td class="center pending">Pending</td><td>Shaw Optimum, Wild Dunes</td></tr>
+      <tr><td>Flooring — Carpet (play)</td><td class="center dash">—</td><td class="center pending">Pending</td><td>Mountain Jubilee, Wind's Breath</td></tr>
+      <tr><td>Tile (bath)</td><td class="center dash">—</td><td class="center pending">Pending</td><td>Shower to ceiling, glass door</td></tr>
+      <tr><td>Cabinets + Vanity</td><td class="center dash">—</td><td class="center pending">Pending</td><td>Auburn Ridge Shaker, Toast on Maple</td></tr>
+      <tr><td>Paint</td><td class="center dash">—</td><td class="center pending">Pending</td><td>Hallman/Lindsay Metro #0530 walls; Cloud trim</td></tr>
+      <tr><td>Trim + Doors + Hardware</td><td class="center dash">—</td><td class="center pending">Pending</td><td>Panel doors, matte black</td></tr>
+      <tr><td>Bath Fan (fixture)</td><td class="center dash">Not inc.</td><td class="center pending">Pending</td><td>Venting by DJ; fan by others</td></tr>
+      <tr><td>Permit</td><td class="center covered">Alt#2 — cost +15%</td><td class="center pending">Pending</td><td>Oconomowoc city building dept</td></tr>
+      <tr><td>GC / Project Management</td><td class="center dash">—</td><td class="center pending">Pending</td><td>Only if going full-GC route</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>Active Quotes</h2>
+
+<div class="card">
+  <div class="quote-header">
+    <div>
+      <div class="quote-name">Dave Jones LLC <span class="badge badge-purple">Trade</span></div>
+      <div class="quote-company">HVAC — Basement Finish</div>
+    </div>
+    <span class="badge badge-green">Quote Received</span>
+  </div>
+
+  <div class="quote-meta">
+    <div><div class="meta-label">Base Quote</div><div class="meta-value price">$2,390</div></div>
+    <div><div class="meta-label">Alt #1 (register install)</div><div class="meta-value">+$390</div></div>
+    <div><div class="meta-label">Alt #2 (permit)</div><div class="meta-value">Cost +15%</div></div>
+    <div><div class="meta-label">Quote Date</div><div class="meta-value">2026-04-14</div></div>
+    <div><div class="meta-label">Valid Until</div><div class="meta-value">2026-04-24</div></div>
+    <div><div class="meta-label">Pricing Lock</div><div class="meta-value">90 days</div></div>
+  </div>
+
+  <div class="quote-section">
+    <div class="quote-section-label">Scope Included</div>
+    <ul class="clean">
+      <li>5 new supply takeoffs (3x 7" gym/play, 1x 7" bedroom, 1x 6" bath)</li>
+      <li>2 low return air takeoffs (gym/play, bedroom)</li>
+      <li>1 high/low make-up air grill for mech room</li>
+      <li>5 ceiling supply registers + 2 low return registers + 2 high/low returns</li>
+      <li>Vent 2 bath fans out back/side of house (4" vent, white termination hoods)</li>
+    </ul>
+  </div>
+
+  <div class="quote-section">
+    <div class="quote-section-label">Exclusions</div>
+    <p class="exclusions">Ductwork modifications beyond spec, roof flashing, taping/sealing, high-voltage wiring, bath exhaust fan (fixture only), HVAC permit (unless Alt#2), generator/temp power, taping/sealing.</p>
+  </div>
+
+  <div class="quote-section quote-contact">
+    <div class="quote-section-label">Contact</div>
+    <div><strong>Keith Steinmetz</strong> · Service & Remodel PM</div>
+    <div><a href="tel:608-220-0848">608-220-0848</a> · <a href="mailto:ksteinmetz@davejonesllc.com">ksteinmetz@davejonesllc.com</a></div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="quote-header">
+    <div>
+      <div class="quote-name">Home MD Exteriors & Remodeling <span class="badge badge-gc">General Contractor</span></div>
+      <div class="quote-company">Full basement finish (potential GC)</div>
+    </div>
+    <span class="badge badge-yellow">Site Visit Scheduled</span>
+  </div>
+
+  <div class="quote-meta">
+    <div><div class="meta-label">Type</div><div class="meta-value">Full project</div></div>
+    <div><div class="meta-label">Site Visit</div><div class="meta-value">Sat 4/18 · 9:00 AM</div></div>
+    <div><div class="meta-label">Quote Expected</div><div class="meta-value">After site visit</div></div>
+  </div>
+
+  <div class="quote-section">
+    <div class="quote-section-label">Company Services</div>
+    <ul class="clean">
+      <li>Decks</li>
+      <li>Exteriors</li>
+      <li>Lower-level finishes</li>
+      <li>Remodeling</li>
+      <li>Additions</li>
+    </ul>
+  </div>
+
+  <div class="quote-section">
+    <div class="quote-section-label">Notes</div>
+    <p class="exclusions">Jon has offered to refer subs for any scope he doesn't cover himself — worth asking which parts he'd sub out vs. self-perform.</p>
+  </div>
+
+  <div class="quote-section quote-contact">
+    <div class="quote-section-label">Contact</div>
+    <div><strong>Jon Kennedy</strong> · Owner</div>
+    <div><a href="tel:608-558-8193">608-558-8193</a> · <a href="mailto:info@homemdwi.com">info@homemdwi.com</a> · <a href="https://www.homemdwi.com" target="_blank">homemdwi.com</a></div>
+  </div>
+</div>
+
+<h2>Finishes (per Veridian spec 12/22/2023)</h2>
+<div class="card">
+  <table>
+    <tbody>
+      <tr><td><strong>Wall paint</strong></td><td>Hallman/Lindsay Metro #0530</td></tr>
+      <tr><td><strong>Trim + doors</strong></td><td>Cloud (white), panel-style to match upstairs</td></tr>
+      <tr><td><strong>Hardware</strong></td><td>Matte black — lever handles, hinges</td></tr>
+      <tr><td><strong>Bedroom flooring</strong></td><td>Shaw Optimum LVP — Wild Dunes</td></tr>
+      <tr><td><strong>Play room flooring</strong></td><td>Mountain Jubilee Carpet — Wind's Breath</td></tr>
+      <tr><td><strong>Bath tile</strong></td><td>Match upstairs powder room; shower tile to ceiling</td></tr>
+      <tr><td><strong>Vanity</strong></td><td>Auburn Ridge Shaker, stain: Toast on Maple, matte black pulls</td></tr>
+      <tr><td><strong>Faucet</strong></td><td>Moen Genta — matte black</td></tr>
+      <tr><td><strong>Toilet</strong></td><td>Kohler Wellworth</td></tr>
+      <tr><td><strong>Shower fixture</strong></td><td>Moen showerhead — matte black, glass door</td></tr>
+      <tr><td><strong>Lighting</strong></td><td>Recessed LED cans on dimmers (open zone), bedroom ceiling fan + closet light, bath vanity light</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>Key Verify-Before-Build Items</h2>
+<div class="card">
+  <ul class="clean">
+    <li>Mech nook access door must be ≥32" wide for service</li>
+    <li>NEC requires 36" clearance in front of breaker panel — check door swing</li>
+    <li>Mech nook needs combustion air — louvered door or transfer grille</li>
+    <li>Sump closet door wide enough to remove pump for service</li>
+    <li>Verify foundation jut-out dimensions on site before framing closet</li>
+    <li>Permit required — Oconomowoc city building dept</li>
+  </ul>
+</div>
+
+<footer>
+  Last updated 2026-04-19 · Live Google Sheet for edits: <a href="https://docs.google.com/spreadsheets/d/10yE3Aqdu0S5YPDT1YOj0e847rfZFuCeayyJ2UPYxYPc/edit" style="color:var(--accent);">open</a>
+</footer>
+
+</body>
+</html>
