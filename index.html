@@ -73,6 +73,7 @@
   .badge-red { background: rgba(248,113,113,0.15); color: var(--red); border: 1px solid rgba(248,113,113,0.3); }
   .badge-purple { background: rgba(192,132,252,0.15); color: var(--purple); border: 1px solid rgba(192,132,252,0.3); }
   .badge-gc { background: rgba(96,165,250,0.15); color: var(--accent); border: 1px solid rgba(96,165,250,0.3); }
+  .badge-orange { background: rgba(251,146,60,0.15); color: #fb923c; border: 1px solid rgba(251,146,60,0.3); }
   .quote-meta {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -149,24 +150,26 @@
         <th>Trade / Scope</th>
         <th>Dave Jones LLC</th>
         <th>Home MD Exteriors</th>
+        <th>Mid Wisconsin Glass &amp; Mirror</th>
         <th>Notes</th>
       </tr>
     </thead>
     <tbody>
-      <tr><td>Framing</td><td class="center dash">—</td><td class="center pending">Pending GC quote</td><td>Walls around bedroom, bath, mech nook, storage, kid fort</td></tr>
-      <tr><td><strong>HVAC</strong></td><td class="center covered">✓ $2,390</td><td class="center pending">Pending</td><td>5 supply takeoffs, 2 returns, 2 bath fan vents, registers</td></tr>
-      <tr><td>Plumbing (bath)</td><td class="center dash">—</td><td class="center pending">Pending</td><td>Shower, toilet, sink — rough-in exists</td></tr>
-      <tr><td>Electrical</td><td class="center dash">—</td><td class="center pending">Pending</td><td>Recessed LEDs, bedroom fan, bath light/fan, smoke/CO</td></tr>
-      <tr><td>Drywall</td><td class="center dash">—</td><td class="center pending">Pending</td><td>All walled areas</td></tr>
-      <tr><td>Flooring — LVP (bedroom)</td><td class="center dash">—</td><td class="center pending">Pending</td><td>Shaw Optimum, Wild Dunes</td></tr>
-      <tr><td>Flooring — Carpet (play)</td><td class="center dash">—</td><td class="center pending">Pending</td><td>Mountain Jubilee, Wind's Breath</td></tr>
-      <tr><td>Tile (bath)</td><td class="center dash">—</td><td class="center pending">Pending</td><td>Shower to ceiling, glass door</td></tr>
-      <tr><td>Cabinets + Vanity</td><td class="center dash">—</td><td class="center pending">Pending</td><td>Auburn Ridge Shaker, Toast on Maple</td></tr>
-      <tr><td>Paint</td><td class="center dash">—</td><td class="center pending">Pending</td><td>Hallman/Lindsay Metro #0530 walls; Cloud trim</td></tr>
-      <tr><td>Trim + Doors + Hardware</td><td class="center dash">—</td><td class="center pending">Pending</td><td>Panel doors, matte black</td></tr>
-      <tr><td>Bath Fan (fixture)</td><td class="center dash">Not inc.</td><td class="center pending">Pending</td><td>Venting by DJ; fan by others</td></tr>
-      <tr><td>Permit</td><td class="center covered">Alt#2 — cost +15%</td><td class="center pending">Pending</td><td>Oconomowoc city building dept</td></tr>
-      <tr><td>GC / Project Management</td><td class="center dash">—</td><td class="center pending">Pending</td><td>Only if going full-GC route</td></tr>
+      <tr><td>Framing</td><td class="center dash">—</td><td class="center pending">Pending GC quote</td><td class="center dash">—</td><td>Walls around bedroom, bath, mech nook, storage, kid fort</td></tr>
+      <tr><td><strong>HVAC</strong></td><td class="center covered">✓ $2,390</td><td class="center pending">Pending</td><td class="center dash">—</td><td>5 supply takeoffs, 2 returns, 2 bath fan vents, registers</td></tr>
+      <tr><td>Plumbing (bath)</td><td class="center dash">—</td><td class="center pending">Pending</td><td class="center dash">—</td><td>Shower, toilet, sink — rough-in exists</td></tr>
+      <tr><td>Electrical</td><td class="center dash">—</td><td class="center pending">Pending</td><td class="center dash">—</td><td>Recessed LEDs, bedroom fan, bath light/fan, smoke/CO</td></tr>
+      <tr><td>Drywall</td><td class="center dash">—</td><td class="center pending">Pending</td><td class="center dash">—</td><td>All walled areas</td></tr>
+      <tr><td>Flooring — LVP (bedroom)</td><td class="center dash">—</td><td class="center pending">Pending</td><td class="center dash">—</td><td>Shaw Optimum, Wild Dunes</td></tr>
+      <tr><td>Flooring — Carpet (play)</td><td class="center dash">—</td><td class="center pending">Pending</td><td class="center dash">—</td><td>Mountain Jubilee, Wind's Breath</td></tr>
+      <tr><td>Tile (bath)</td><td class="center dash">—</td><td class="center pending">Pending</td><td class="center dash">—</td><td>Shower to ceiling, glass door</td></tr>
+      <tr><td>Cabinets + Vanity</td><td class="center dash">—</td><td class="center pending">Pending</td><td class="center dash">—</td><td>Auburn Ridge Shaker, Toast on Maple</td></tr>
+      <tr><td>Paint</td><td class="center dash">—</td><td class="center pending">Pending</td><td class="center dash">—</td><td>Hallman/Lindsay Metro #0530 walls; Cloud trim</td></tr>
+      <tr><td>Trim + Doors + Hardware</td><td class="center dash">—</td><td class="center pending">Pending</td><td class="center dash">—</td><td>Panel doors, matte black</td></tr>
+      <tr><td>Bath Fan (fixture)</td><td class="center dash">Not inc.</td><td class="center pending">Pending</td><td class="center dash">—</td><td>Venting by DJ; fan by others</td></tr>
+      <tr><td><strong>Shower door + mirror (basement bath)</strong></td><td class="center dash">—</td><td class="center dash">—</td><td class="center" style="color:#fb923c;font-style:italic;">Awaiting Blake</td><td>MWGM specialty — needs enclosure + vanity top first; quote blocked on Blake sending info</td></tr>
+      <tr><td>Permit</td><td class="center covered">Alt#2 — cost +15%</td><td class="center pending">Pending</td><td class="center dash">—</td><td>Oconomowoc city building dept</td></tr>
+      <tr><td>GC / Project Management</td><td class="center dash">—</td><td class="center pending">Pending</td><td class="center dash">—</td><td>Only if going full-GC route</td></tr>
     </tbody>
   </table>
 </div>
@@ -252,6 +255,56 @@
   </div>
 </div>
 
+<div class="card" style="border-color: rgba(251,146,60,0.4);">
+  <div class="quote-header">
+    <div>
+      <div class="quote-name">Mid Wisconsin Glass &amp; Mirror <span class="badge badge-purple">Trade</span></div>
+      <div class="quote-company">Shower door + mirror — basement bath only</div>
+    </div>
+    <span class="badge badge-orange">Awaiting Blake's Response</span>
+  </div>
+
+  <div class="quote-meta">
+    <div><div class="meta-label">Type</div><div class="meta-value">Specialty glass / mirror</div></div>
+    <div><div class="meta-label">Scope</div><div class="meta-value">Shower door + mirror (basement bath)</div></div>
+    <div><div class="meta-label">Quote Status</div><div class="meta-value" style="color:#fb923c;">Blocked — needs info from Blake</div></div>
+    <div><div class="meta-label">Kathy's Reply</div><div class="meta-value">2026-04-09</div></div>
+  </div>
+
+  <div class="quote-section">
+    <div class="quote-section-label">Scope They Cover</div>
+    <ul class="clean">
+      <li>Shower door (basement bath)</li>
+      <li>Mirror (basement bath)</li>
+    </ul>
+  </div>
+
+  <div class="quote-section">
+    <div class="quote-section-label">Exclusions / Won't Touch</div>
+    <p class="exclusions">Rough construction, shower enclosure framing, vanity tops — those must be fully installed before MWGM will come out to measure and quote.</p>
+  </div>
+
+  <div class="quote-section">
+    <div class="quote-section-label" style="color:#fb923c;">Info Blake Needs to Send (Blocking)</div>
+    <ul class="clean">
+      <li>Photo of 2nd-floor bath (to match the look)</li>
+      <li>Glass type preference — clear, rain, frosted, etc.</li>
+      <li>Hardware finish — silver, brushed nickel, matte black, etc.</li>
+    </ul>
+  </div>
+
+  <div class="quote-section">
+    <div class="quote-section-label">Background</div>
+    <p class="exclusions">Did the original shower doors and mirrors in Blake's Veridian home during initial construction. Returning relationship.</p>
+  </div>
+
+  <div class="quote-section quote-contact">
+    <div class="quote-section-label">Contact</div>
+    <div><strong>Kathy / Todd Meyer</strong></div>
+    <div><a href="tel:608-438-4960">608-438-4960</a> · <a href="mailto:todd.mwgm@gmail.com">todd.mwgm@gmail.com</a> · <a href="https://www.midwisconsinshowerdoors.com/" target="_blank">midwisconsinshowerdoors.com</a></div>
+  </div>
+</div>
+
 <h2>Finishes (per Veridian spec 12/22/2023)</h2>
 <div class="card">
   <table>
@@ -280,6 +333,7 @@
     <li>Sump closet door wide enough to remove pump for service</li>
     <li>Verify foundation jut-out dimensions on site before framing closet</li>
     <li>Permit required — Oconomowoc city building dept</li>
+    <li>Send MWGM: 2nd-floor bath photo + glass type (clear/rain/frosted) + hardware finish (matte black/brushed nickel/silver) — Kathy's 4/9 ask, still unblocked</li>
   </ul>
 </div>
 
